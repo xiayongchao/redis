@@ -17,6 +17,17 @@ public class RedisApplication {
 
     @Bean
     public JedisConnectionFactory redisConnectionFactory() {
+        /**
+         * 使用JedisConnectionFactory的默认配置，可根据具体需求调整
+         * this.hostName = "localhost";
+         * this.port = 6379;
+         * this.timeout = 2000;
+         * this.usePool = true;
+         * this.useSsl = false;
+         * this.poolConfig = new JedisPoolConfig();
+         * this.dbIndex = 0;
+         * this.convertPipelineAndTxResults = true;
+         */
         return new JedisConnectionFactory();
     }
 
